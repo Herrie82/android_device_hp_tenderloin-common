@@ -1,6 +1,3 @@
-# AndroidGO
-$(call inherit-product, build/target/product/go_defaults_512.mk)
-
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
@@ -142,27 +139,14 @@ PRODUCT_PACKAGES += \
     lights.tenderloin \
     android.hardware.light@2.0-impl
 
-# Low-RAM optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.force_highendgfx=true \
-    dalvik.vm.jit.codecachesize=0 \
-    ro.config.max_starting_bg=4 \
-    ro.sys.fw.bg_apps_limit=8 \
-    ro.sys.fw.use_trim_settings=true \
-    ro.sys.fw.empty_app_percent=50 \
-    ro.sys.fw.trim_empty_percent=100 \
-    ro.sys.fw.trim_cache_percent=100 \
-    ro.sys.fw.trim_enable_memory=874512384 \
-    ro.sys.fw.bservice_enable=true \
-    ro.sys.fw.bservice_limit=5 \
-    ro.sys.fw.bservice_age=5000
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_codecs_google_performance.xml:system/etc/media_codecs_google_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.force_highendgfx=true
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -233,7 +217,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160 \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.dex2oat-swap=false \
+    dalvik.vm.dex2oat-swap=true \
     dalvik.vm.image-dex2oat-filter=speed \
     ro.com.google.networklocation=1 \
     media.stagefright.legacyencoder=true \
