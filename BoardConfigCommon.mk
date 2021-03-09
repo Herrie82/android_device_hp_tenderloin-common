@@ -2,6 +2,9 @@
 -include vendor/hp/tenderloin/BoardConfigVendor.mk
 -include hardware/atheros/ath6kl/firmware/device-ath6kl.mk
 
+# Halium requires BOARD_BUILD_SYSTEM_ROOT_IMAGE for non-Treble devices
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
 PLATFORM_PATH := device/hp/tenderloin-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include 
