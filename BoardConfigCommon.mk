@@ -153,7 +153,8 @@ TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := $(PLATFORM_PATH)/releasetools/tende
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := $(PLATFORM_PATH)/releasetools/tenderloin_ota_from_target_files
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Twrp
 DEVICE_RESOLUTION = 1024x768
