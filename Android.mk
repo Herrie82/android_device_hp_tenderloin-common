@@ -40,4 +40,16 @@ ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_MOBOOT_CONFIG)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+
+# halium doesn't support 32-bit builds by default, so the patches sometime point directly to /system/lib64
+# Make lib64 -> lib symlink to cover this situation easily
+LIB64_SYMLINK := $(PRODUCT_OUT)/system/lib64
+$(LIB64_SYMLINK):
+	@echo "lib64 to lib symlink: $@"
+	@mkdir -p $(PRODUCT_OUT)/system/lib
+	$(hide) ln -sf lib $(LIB64_SYMLINK)
+
+ALL_DEFAULT_INSTALLED_MODULES += $(LIB64_SYMLINK)
+								 
 endif
