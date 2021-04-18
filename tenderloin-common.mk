@@ -67,14 +67,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Bluetooth
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:/system/etc/bluetooth/bt_vendor.conf \
-    $(LOCAL_PATH)/bluetooth/bluecore6.psr:/system/etc/bluetooth/bluecore6.psr
-
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-legacy \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:/system/etc/bluetooth/bt_vendor.conf \
+#    $(LOCAL_PATH)/bluetooth/bluecore6.psr:/system/etc/bluetooth/bluecore6.psr
+#
+#PRODUCT_PACKAGES += \
+#    android.hardware.bluetooth@1.0-impl-legacy \
+#    android.hardware.bluetooth@1.0-service \
+#    libbt-vendor
 
 # Camera
 #PRODUCT_PACKAGES += \
@@ -249,8 +249,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+#PRODUCT_PACKAGES += \
+#    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
