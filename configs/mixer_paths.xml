@@ -63,8 +63,6 @@
     <ctl name="Reset" ignore="1" />
     <ctl name="ANC" ignore="1" />
     <ctl name="Sound Device Loopback" ignore="1" />
-    <ctl name="phone_rx" ignore="1" />
-    <ctl name="phone_tx" ignore="1" />
     <ctl name="bt_sco_rx" ignore="1" />
     <ctl name="bt_sco_tx" ignore="1" />
     <ctl name="AIF1DAC1 EQ1 Volume" ignore="1" />
@@ -187,7 +185,6 @@
     <ctl name="AIF1DAC2 3D Stereo Switch" ignore="1" />
     <ctl name="AIF2DAC 3D Stereo Volume" ignore="1" />
     <ctl name="AIF2DAC 3D Stereo Switch" ignore="1" />
-    <ctl name="Force Route Switch" ignore="1" />
     <ctl name="AIF3 Boost Volume" ignore="1" />
     <ctl name="AIF1DAC1 MBC Switch" ignore="1" />
     <ctl name="AIF1DAC2 MBC Switch" ignore="1" />
@@ -205,7 +202,6 @@
     <ctl name="AIF1DAC2 Enhanced EQ Switch" ignore="1" />
     <ctl name="AIF2DAC Enhanced EQ Switch" ignore="1" />
     <ctl name="Enhanced EQ Mode" ignore="1" />
-    <ctl name="VocPath" ignore="1" />
     <ctl name="ADCR Mux" ignore="1" />
     <ctl name="ADCL Mux" ignore="1" />
     <ctl name="AIF3ADC Mux" ignore="1" />
@@ -254,8 +250,6 @@
     <ctl name="AIF1ADC1R Mixer AIF2 Switch" ignore="1" />
     <ctl name="AIF1ADC1L Mixer ADC/DMIC Switch" ignore="1" />
     <ctl name="AIF1ADC1L Mixer AIF2 Switch" ignore="1" />
-    <ctl name="LINEOUT2 Mixer IN2R Switch" ignore="1" />
-    <ctl name="LINEOUT2 Mixer IN2L Switch" ignore="1" />
     <ctl name="LINEOUT1 Mixer IN1R Switch" ignore="1" />
     <ctl name="LINEOUT1 Mixer IN1L Switch" ignore="1" />
     <ctl name="SPKR Boost Direct Voice Switch" ignore="1" />
